@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Tables</title>>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <table>
+        <tr>
+            <th scope="row" rowspan="2">Country</th>
+            <th scope="row" rowspan="2">Standard Unit</th>
+            <th scope="col" colspan="2">Men</th>
+            <th scope="col" colspan="2">Women</th>
+        </tr>
+        <tr>
+            <th>Advice</th>
+            <th>Max g/day</th>
+            <th>Advice</th>
+            <th>Max g/day</th>
+        </tr>
+
+        <tr>
+            <th>Ireland</th>
+            <td>8g</td>
+            <th>Three Units per day</th>
+            <td>24</td>
+            <th>Two units a day</th>
+            <td>16</td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">Canada</th>
+            <td rowspan="3">13.6g</td>
+            <th scope="row" colspan="4">
+                <table class="center">
+                    <tr>
+                        <th scope="row" colspan="1">Definition</th>
+                        <th scope="row" colspan="2">Standard drinks per week</th>
+                    </tr>
+                    <tr>
+                        <th>Low Risk</th>
+                        <td>1-14</td>
+                    </tr>
+                    <tr>
+                        <th>Moderate List</th>
+                        <td>35+</td>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </table>
+</body>

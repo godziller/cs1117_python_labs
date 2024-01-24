@@ -1,0 +1,43 @@
+body h1{
+    color: white;
+    background-color: black;
+}
+
+body{
+    background-color: yellow;
+}
+
+p{
+    color: aqua;
+}
+
+.question{
+    color: white;
+    background-color: black;
+}
+
+a{
+    color: fuchsia;
+    background-color: grey;
+}
+
+p b{
+    color: red;
+}
+p em{
+    color: red;
+}
+
+#bow li{
+    color: cyan;
+    background-color: fuchsia;
+}
+
+nav a{
+        color: red;
+}
+
+nav > h1{
+    color: aqua;
+    background-color: yellow;
+}
