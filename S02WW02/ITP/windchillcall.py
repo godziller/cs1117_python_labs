@@ -1,3 +1,0 @@
-import windchill
-
-print(windchill)
