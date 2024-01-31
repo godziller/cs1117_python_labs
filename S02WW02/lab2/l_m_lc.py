@@ -9,7 +9,15 @@ def tupleLower():
 tupleLower()
 """
 #question 2 
-
+"""
 fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
 newList = ['True' if word[0] == "A" else "False" for word in fruit] 
 print(newList)
+"""
+#question 3     
+
+#the '-' in this an invalid character.
+
+
+#Question 4 
+
