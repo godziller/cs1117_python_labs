@@ -2,12 +2,13 @@ MASK = "*"
 import string
 
 def generate_banned_words():
-    bannedWords = []
+    banned = []
     file = open("bannedWords.txt", "r")
     for word in file.read().split():
-        bannedWords.append(word)
+        banned.append(word)
     file.close()
-    return bannedWords
+    print(banned)
+    return banned
 
 
 def censor_file(filename):
@@ -34,4 +35,5 @@ def censor_file(filename):
     
 generate_banned_words()
 bannedList = generate_banned_words()
+
 censor_file("someText.txt")
