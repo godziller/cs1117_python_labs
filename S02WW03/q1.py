@@ -19,3 +19,7 @@ capped_programming_langs = map(capFn, programming_languages)
 
 for lang in capped_programming_langs:
     print (lang)
+# As a single line
+
+print ("Trying as a single line")    
+print (map(lambda lang: string.upper(lang),programming_languages))
