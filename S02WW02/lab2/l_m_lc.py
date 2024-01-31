@@ -11,9 +11,5 @@ tupleLower()
 #question 2 
 
 fruit = ["Apple", "Banana", "Pear", "Apricot", "Orange"]
-list = (list(map(lambda x: (x), fruit)))
-for fruits in fruit:
-    if "a" or "A" in fruits[0]:
-        print("True")
-    else:
-        print("false")
+newList = ['True' if word[0] == "A" else "False" for word in fruit] 
+print(newList)
