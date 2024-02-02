@@ -53,4 +53,6 @@ else:
     print("Is a lo shu magic square")
 """
 
-getSquare('lo_shu_square.txt')
+#getSquare('lo_shu_square.txt')
+theFile = open('lo_shu_square.txt', 'r')
+print(theFile)
