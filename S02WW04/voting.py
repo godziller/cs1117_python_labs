@@ -1,7 +1,7 @@
 
 def readVotes():
     f = open("votes.txt", 'r')
-    print("\n --Question 1-- \n")
+    print("\n --Question 1-- \n")                               #Very important base script for finding the matrix 
     lineList = []
     for line in f.readlines():
         line = line.strip('\n').replace(',','').split()         #getting rid of any extra lines, commas and splitting up the words 
@@ -42,12 +42,28 @@ def zipVotes(matrix):
         for line in matrix:                             # for each sublist in our matrix
             amount = amount + int(line[pointer])
         #print("total amount", subFunction_TotalAmountVotes(matrix))
-        print(f"Candidate {pointer}: {amount} \n Vote Percentage {round((amount / subFunction_TotalAmountVotes(matrix)) * 100, 2)}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
+        candidatePercentage = round((amount / subFunction_TotalAmountVotes(matrix)) * 100, 2)
+        candidatePercentageList.append(candidatePercentage)
+        print(f"Candidate {pointer}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
         pointer += 1                                    #inc pointer 
 
 
+##################################################################################################################################3
+        # Question 3 and  
+
+def overFifty():
+    for percentile in candidatePercentageList:
+        if percentile >= 50:
+            print('WE HAVE A WINNER')
+   
+    candidatePercentageList.sort()
+    print(candidatePercentageList[len(candidatePercentageList)-1])
+
 matrix = readVotes()
+candidatePercentageList = []
+candidateDict = {"Candidate A" : 0, "Candidate B"}
 countAllVotes(matrix)
 zipVotes(matrix)
+overFifty()
 # B 
 
