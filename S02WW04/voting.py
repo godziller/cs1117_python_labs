@@ -20,11 +20,16 @@ def countAllVotes(mat):
             number = int(number)
             rowAmount = rowAmount + number
         print(rowAmount)
-    zipVotes(mat)
+    zipVotes(mat)           #Calling Question 2
+
+    
+############################################################################################################################3
+    
+
 
 def subFunction_TotalAmountVotes(matrix):         # creating this as a precaution as i feel i may need to find the total in later questions
     amount = 0
-    for line in matrix:                           #simply getting each list in the matrix, number in those lists, and adding it to a grand total
+    for line in matrix:                           #simply getting each list in the matrix, number in those lists, and adding it to a grand
         for number in line:
             amount = amount + int(number)
     return amount
