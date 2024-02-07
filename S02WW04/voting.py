@@ -24,7 +24,7 @@ def countAllVotes(mat):
 
 def subFunction_TotalAmountVotes(matrix):         # creating this as a precaution as i feel i may need to find the total in later questions
     amount = 0
-    for line in matrix:
+    for line in matrix:                           #simply getting each list in the matrix, number in those lists, and adding it to a grand total
         for number in line:
             amount = amount + int(number)
     return amount
@@ -35,11 +35,9 @@ def zipVotes(matrix):
 
     pointer = 0                         #a simple pointer to move along our while loop
     while pointer in range(0,4):        #while the pointer is in range of the amount of candidates we have 
-        amount = 0
-        totalVotes = 0 
+        amount = 0                      #the sum of each candidates score (initalized to 0)
         for line in matrix:                             # for each sublist in our matrix
             amount = amount + int(line[pointer])
-        totalVotes += amount
         #print("total amount", subFunction_TotalAmountVotes(matrix))
         print(f"Candidate {pointer}: {amount} \n Vote Percentage {round((amount / subFunction_TotalAmountVotes(matrix)) * 100, 2)}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
         pointer += 1                                    #inc pointer 
