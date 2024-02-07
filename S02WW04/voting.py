@@ -8,8 +8,7 @@ def readVotes():
         lineList.append(line)
     
     f.close()
-   # print(lineList)
-    countAllVotes(lineList)
+    return lineList
 
 # Func to return full voting count across all voting precidences
 
@@ -20,7 +19,6 @@ def countAllVotes(mat):
             number = int(number)
             rowAmount = rowAmount + number
         print(rowAmount)
-    zipVotes(mat)           #Calling Question 2
 
     
 ############################################################################################################################3
@@ -48,8 +46,8 @@ def zipVotes(matrix):
         pointer += 1                                    #inc pointer 
 
 
-readVotes()
-
-
+matrix = readVotes()
+countAllVotes(matrix)
+zipVotes(matrix)
 # B 
 
