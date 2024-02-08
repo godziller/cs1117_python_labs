@@ -1,4 +1,5 @@
 
+
 def readVotes():
     f = open("votes.txt", 'r')
     print("\n --Question 1-- \n")                               #Very important base script for finding the matrix 
@@ -38,13 +39,18 @@ def zipVotes(matrix):
 
     pointer = 0                         #a simple pointer to move along our while loop
     while pointer in range(0,4):        #while the pointer is in range of the amount of candidates we have 
-        amount = 0                      #the sum of each candidates score (initalized to 0)
+        amount = 0                      #the sum of each candidates score (initialized to 0)
         for line in matrix:                             # for each sublist in our matrix
             amount = amount + int(line[pointer])
-        #print("total amount", subFunction_TotalAmountVotes(matrix))
+
         candidatePercentage = round((amount / subFunction_TotalAmountVotes(matrix)) * 100, 2)
+        #print(candidatePercentageList)
         candidatePercentageList.append(candidatePercentage)
-        print(f"{candidateDict[pointer]}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
+        individualList = [candidatePercentage, numberToCharacterDict[pointer]]
+        cAndPMatrix.append(individualList)
+        #print(cAndPMatrix)
+
+        print(f"candidate {pointer}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
         
         pointer += 1                                    #inc pointer 
 
@@ -53,17 +59,13 @@ def zipVotes(matrix):
         # Question 3 and  
 
 def overFifty():
-    for percentile in candidatePercentageList:
-        if percentile >= 50:
-            print('WE HAVE A WINNER')
+    for lists in cAndPMatrix:
+        np.
    
-    candidatePercentageList.sort()
-    print(candidatePercentageList[len(candidatePercentageList)-1])
-
 matrix = readVotes()
 candidatePercentageList = []
-candidateDict = {0: "Candidate A", 1:"Candidate B" , 2:"Candidate C", 3:"Candidate D" }
-
+numberToCharacterDict = {0:'A',1:"B",2:'C',3:'D'}
+cAndPMatrix = []
 countAllVotes(matrix)
 zipVotes(matrix)
 overFifty()
