@@ -44,7 +44,8 @@ def zipVotes(matrix):
         #print("total amount", subFunction_TotalAmountVotes(matrix))
         candidatePercentage = round((amount / subFunction_TotalAmountVotes(matrix)) * 100, 2)
         candidatePercentageList.append(candidatePercentage)
-        print(f"Candidate {pointer}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
+        print(f"{candidateDict[pointer]}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
+        
         pointer += 1                                    #inc pointer 
 
 
@@ -61,7 +62,8 @@ def overFifty():
 
 matrix = readVotes()
 candidatePercentageList = []
-candidateDict = {"Candidate A" : 0, "Candidate B"}
+candidateDict = {0: "Candidate A", 1:"Candidate B" , 2:"Candidate C", 3:"Candidate D" }
+
 countAllVotes(matrix)
 zipVotes(matrix)
 overFifty()
