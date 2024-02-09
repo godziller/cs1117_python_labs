@@ -1,7 +1,7 @@
 
 
 def readVotes():
-    f = open("votes.txt", 'r')
+    f = open("votesTwo.txt", 'r')
     print("\n --Question 1-- \n")                               #Very important base script for finding the matrix 
     lineList = []
     for line in f.readlines():
@@ -48,9 +48,9 @@ def zipVotes(matrix):
         candidatePercentageList.append(candidatePercentage)
         individualList = [candidatePercentage, numberToCharacterDict[pointer]]
         cAndPMatrix.append(individualList)
-        print(cAndPMatrix)
+        #print(cAndPMatrix)
 
-        print(f"candidate {pointer}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
+        print(f"candidate {numberToCharacterDict[pointer]}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
         
         pointer += 1                                    #inc pointer 
 
@@ -66,7 +66,7 @@ def overFifty(mat):
             print("WINNER: ",sublist)
             over_fifty = True
     if not over_fifty:
-        print("No candidate has achieved a percentage over 50%")
+        print("No candidate has achieved a percentage over 50% \n")
         print("These two candidates are in the runoffs with each other:")
         for sublist in sortedMatrix[:2]:  # Get the largest and second-largest scores
             print(sublist)
