@@ -46,9 +46,9 @@ def zipVotes(matrix):
         candidatePercentage = round((amount / subFunction_TotalAmountVotes(matrix)) * 100, 2)
         #print(candidatePercentageList)
         candidatePercentageList.append(candidatePercentage)
-        individualList = [candidatePercentage, numberToCharacterDict[pointer]]
-        cAndPMatrix.append(individualList)
-        #print(cAndPMatrix)
+       # individualList = [candidatePercentage, numberToCharacterDict[pointer]]
+        #cAndPMatrix.append(individualList)
+       # print(cAndPMatrix)
 
         print(f"candidate {pointer}: {amount} \n Vote Percentage {candidatePercentage}% \n")         # print this as your candidate's sum of votes, then repeat until out of range, ie. no more candidates
         
@@ -57,17 +57,16 @@ def zipVotes(matrix):
 
 ##################################################################################################################################3
         # Question 3 and  
-
-def overFifty():
-    for lists in cAndPMatrix:
-        np.
-   
+def overFifty(mat):
+    orderList
+    candidatePercentageList.sort()
+    return candidatePercentageList
+    
 matrix = readVotes()
 candidatePercentageList = []
-numberToCharacterDict = {0:'A',1:"B",2:'C',3:'D'}
-cAndPMatrix = []
+orderList = ['A','B','C','D']
 countAllVotes(matrix)
 zipVotes(matrix)
-overFifty()
+print(overFifty(candidatePercentageList))
 # B 
 
